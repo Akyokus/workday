@@ -68,6 +68,7 @@ if (post('start')){ //the post method comes from public/js/create.js
         'wday' => $workday
     ];  // array to create request
 
+
     if (request::createRequest($create)){
         echo "İzin talebiniz iletilmiştir.";
     }else{

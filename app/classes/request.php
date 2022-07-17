@@ -9,10 +9,9 @@ public static function createRequest($create){
         $query = $db->prepare("INSERT INTO requests SET username=:uname,startDate=:startdate,endDate=:enddate,workday=:wday");
         $row = $query->execute($create);
         if ($row){
-
             return true;
         }else{
-            return "Veritabanı Hatası";
+            return false;
         }
     }else{
         return false;
